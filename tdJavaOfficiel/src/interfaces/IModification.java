@@ -1,5 +1,7 @@
 package interfaces;
 
+import java.util.List;
+
 public interface IModification <T> {
 	
 	void add(T toAdd);
@@ -7,7 +9,12 @@ public interface IModification <T> {
 	void update(int id);
 	void showDetail(int id);
 	void showAll();
-	//int getById(T id);
+	/*
+	 List<T> findAll();
+	 int getById(T id);
+	 T getById(int id);
+	 */
+	
 	
 
 }

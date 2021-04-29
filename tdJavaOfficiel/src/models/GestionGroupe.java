@@ -9,7 +9,7 @@ public class GestionGroupe implements IModification<Groupe>{
 	ArrayList<Groupe> groupes;
 	
 	public GestionGroupe() {
-		this.groupes = new ArrayList<Groupe>();
+		groupes = new ArrayList<Groupe>();
 	}
 	
 	public void add(Groupe groupe) {

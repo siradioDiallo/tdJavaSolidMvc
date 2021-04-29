@@ -6,10 +6,10 @@ public class Groupe {
 
 private String nom;
 private int idGroupe;
-private ArrayList<Etudiant> etudiantGroupe;
+ArrayList<Etudiant> etudiantGroupe;
 
 public Groupe() {
-	this.etudiantGroupe=new ArrayList<Etudiant>();
+	etudiantGroupe=new ArrayList<Etudiant>();
 }
 	public Groupe(String nom,int id) {
 		this.etudiantGroupe=new ArrayList<Etudiant>();

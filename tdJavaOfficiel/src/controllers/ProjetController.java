@@ -1,6 +1,7 @@
 package controllers;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import models.*;
 import views.ProjetView;
@@ -53,7 +54,7 @@ public void run() {
 		 case StartOption2:view.promptForMenuEtudiant();view.promptForMenu();break;
 		  case StartOption3:view.promptForMenuProf();view.promptForMenu();break;
 		  case StartOption4:view.promptForMenuGestionGrpEtd();view.promptForMenu();break;
-		  case End:break;
+		  case End:System.exit(0);break;
 		  
 		}
 	}
@@ -99,6 +100,10 @@ public void showAllEtudiant () {
 
 public void updateEtudiant(int id) {
 	allEtudiant.update(id);
+}
+
+public ArrayList<Etudiant> getListEtudiant(){
+	return allEtudiant.getEtudiants();
 }
 
 //CONTROL POUR PROFESSEUR

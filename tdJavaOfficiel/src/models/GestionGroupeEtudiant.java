@@ -2,27 +2,30 @@ package models;
 
 import java.util.ArrayList;
 
-public class GestionGroupeEtudiant {
+import interfaces.IGestionGE;
+
+public class GestionGroupeEtudiant implements IGestionGE{
 Groupe groupe;
 GestionGroupe allGroup;
-GestionEtudiant allEtudiants;
+GestionEtudiant gestionEtudiant;
 ArrayList<Etudiant> lesEtudiantGrp;
+ArrayList<Etudiant> allEtudiants;
 	
-	public GestionGroupeEtudiant(Groupe grp,ArrayList<Etudiant> etud) {
-		this.allGroup=new GestionGroupe();
-		this.allEtudiants=new GestionEtudiant(etud);
-		this.lesEtudiantGrp =grp.getEtudiantGroupe();
-		this.groupe=grp;
+	public GestionGroupeEtudiant(Groupe grp,ArrayList<Etudiant> ets) {
+		allGroup=new GestionGroupe();
+		allEtudiants=ets;
+		lesEtudiantGrp =grp.etudiantGroupe;
+		groupe=grp;
 	}
 	
 	public void add(int id) {
 		 boolean existe=false;
 		  Etudiant etud = new Etudiant();
-		  for(Etudiant ets:allEtudiants.etudiants) {
+		  for(Etudiant ets:allEtudiants) {
 			     if(ets.getId()==id) {
 						  etud=ets;
 						  existe=true;
-						  lesEtudiantGrp.add(etud);
+						  groupe.etudiantGroupe.add(etud);
 				  }
 			     
 				}
@@ -37,7 +40,7 @@ ArrayList<Etudiant> lesEtudiantGrp;
 	public void delete(int id) {
 		boolean existe=false;
 		  Etudiant etud = new Etudiant();
-		  for(Etudiant ets:allEtudiants.etudiants) {
+		  for(Etudiant ets:allEtudiants) {
 			     if(ets.getId()==id) {
 						  etud=ets;
 						  existe=true;

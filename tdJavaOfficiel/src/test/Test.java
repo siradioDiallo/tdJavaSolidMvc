@@ -28,6 +28,7 @@ public class Test {
 	    GestionProfesseur tabProfs = new GestionProfesseur();
 	    GestionGroupe tabGroupes = new GestionGroupe(); 
 	    //insertion des données dans les ArrayList
+	    
 	    tabEtudiants.add(e1);
 	    tabEtudiants.add(e2);
 	    tabEtudiants.add(e3);

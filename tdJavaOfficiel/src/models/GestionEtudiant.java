@@ -8,16 +8,18 @@ import java.util.Scanner;
 public class GestionEtudiant implements IModification<Etudiant>{
 	
 	ArrayList<Etudiant> etudiants;
+	
 	Scanner sc = new Scanner(System.in);
 	
 	public GestionEtudiant() {
-		this.etudiants = new ArrayList<Etudiant>();
+	 etudiants = new ArrayList<Etudiant>();
 		
 	}
 	
 	public GestionEtudiant(ArrayList<Etudiant> ets) {
 		this.etudiants=ets;
 	}
+	
 	
 	public void add(Etudiant etudiant) {
 		etudiants.add(etudiant);
@@ -64,7 +66,7 @@ public class GestionEtudiant implements IModification<Etudiant>{
 				 etud.setGroupeSanguin(sc.nextLine());
 		    }
 		    else {
-			  System.out.println("Etudiant insponible !");
+			  System.out.println("Etudiant indisponible !");
 			  
 		    }  
 	}

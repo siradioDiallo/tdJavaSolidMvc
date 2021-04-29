@@ -220,15 +220,20 @@ public void promptForMenuGestionGrpEtd() {
 		int choixSousMenu = sc.nextInt();
 		switch(choixSousMenu) {
 		case 1: 
+			System.out.println("-------------------- Ajout d'Etudiant ------------------");
 			System.out.println("Entrer l'id de l'étudiant:");
 			int idEt = sc.nextInt();
 			controller.addEtudiantToGroupe(idEt);
+			System.out.println("-------------------- Ajout Terminée ------------------");
 			break;
 		case 2:
+			System.out.println("-------------------- Supression------------------");
 			System.out.println("Entrer l'id de l'étudiant:");
 		   int idToDel = sc.nextInt();controller.deleteEtudiantfromGrp(idToDel);
+		   System.out.println("-------------------- Supression Terminée ------------------");
 		   break;
-		case 3:controller.afficherEtudiantsGrp(); break;
+		case 3:controller.afficherEtudiantsGrp();
+		System.out.println("-------------------- Vous Avez Quitter ------------------"); break;
 		case 4:continuer=false;break;
 		}
 	System.out.println("");
